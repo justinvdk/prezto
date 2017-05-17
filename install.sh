@@ -2,7 +2,7 @@
 
 if [ -f ~/.zshenv ] || [ -h ~/.zshenv ]; then
   printf "Found zshenv, making backup to ~/.zshenv.pre-jkprezto"
-  mv ~/.zshenv ~/.zshenv.zshenv.pre-jkprezto
+  mv ~/.zshenv ~/.zshenv.pre-jkprezto
 fi
 
 cat << EOF > ~/.zshenv
