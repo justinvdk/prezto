@@ -41,7 +41,7 @@ function prompt_justin_setup {
   zstyle ':prezto:module:git:info:keys' format 'prompt' '(%b%D)'
 
   # Define prompts.
-  PROMPT='%F{15}%n${SSH_TTY:+"%f%F{7}@%f%F{14}%m%f "}%(?:%F{green}➜%f:%F{red}✖%f) ${git_info:+${(e)git_info[prompt]}} %B%c%b '
+  PROMPT='%f%n${SSH_TTY:+"%f%F{7}@%f%F{14}%m%f "}%(?:%F{green}➜%f:%F{red}✖%f) ${git_info:+${(e)git_info[prompt]}} %B%c%b '
   RPROMPT='${editor_info[overwrite]}${VIM:+" %B%F{green}V%f%b"}'
   SPROMPT='zsh: correct %F{red}%R%f to %F{green}%r%f [nyae]? '
 }
