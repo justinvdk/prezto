@@ -51,12 +51,11 @@ alias scp='noglob scp'
 alias sftp='noglob sftp'
 
 # Define general aliases.
-alias _='sudo'
+#alias _='sudo'
 alias b='${(z)BROWSER}'
 
 alias diffu="diff --unified"
 alias e='${(z)VISUAL:-${(z)EDITOR}}'
-alias mkdir="${aliases[mkdir]:-mkdir} -p"
 alias p='${(z)PAGER}'
 alias po='popd'
 alias pu='pushd'
@@ -137,17 +136,17 @@ fi
 
 # macOS Everywhere
 if is-darwin; then
-  alias o='open'
+  # alias o='open'
 elif is-cygwin; then
-  alias o='cygstart'
+  alias open='cygstart'
   alias pbcopy='tee > /dev/clipboard'
   alias pbpaste='cat /dev/clipboard'
 elif is-termux; then
-  alias o='termux-open'
+  alias open='termux-open'
   alias pbcopy='termux-clipboard-set'
   alias pbpaste='termux-clipboard-get'
 else
-  alias o='xdg-open'
+  alias open='setsid xdg-open > /dev/null 2>&1'
 
   if (( $+commands[xclip] )); then
     alias pbcopy='xclip -selection clipboard -in'
@@ -157,6 +156,7 @@ else
     alias pbpaste='xsel --clipboard --output'
   fi
 fi
+alias ]='open'
 
 alias pbc='pbcopy'
 alias pbp='pbpaste'

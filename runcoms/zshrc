@@ -47,7 +47,5 @@ if [[ "$(uname -s)" == "Darwin" ]]; then
   alias updatedb="sudo /usr/libexec/locate.updatedb"
 elif [[ "$(uname -s)" == "Linux" ]]; then
   alias se=sudoedit
-  alias open="setsid xdg-open > /dev/null 2>&1"
 fi
-
 
