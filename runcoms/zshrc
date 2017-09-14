@@ -26,7 +26,6 @@ alias grep-magenta="GREP_COLOR='1;35' grep --color=always"
 alias grep-cyan="GREP_COLOR='1;36' grep --color=always"
 alias grep-white="GREP_COLOR='1;37' grep --color=always"
 
-alias ]="open"
 alias pgr="ps aux | grep -v grep | grep -e"
 
 # util
