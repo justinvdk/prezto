@@ -35,6 +35,10 @@ function nvm {
   nvm "$@"
 }
 
+# exports
+# fix for linux based osses wanted LC_ALL set
+export LC_ALL=$LANG
+
 # config
 alias nano=/usr/bin/vim
 alias really_nano=/usr/bin/nano
