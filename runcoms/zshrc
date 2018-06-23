@@ -28,10 +28,13 @@ alias grep-white="GREP_COLOR='1;37' grep --color=always"
 
 alias pgr="ps aux | grep -v grep | grep -e"
 
+unalias gdu # collides with g(nu)du on mac
+
 # util
 function nvm {
   unset -f $funcstack[1]
-  . /usr/share/nvm/init-nvm.sh
+  export NVM_DIR=~/.nvm && source $(brew --prefix nvm)/nvm.sh
+  # . /usr/share/nvm/init-nvm.sh
   nvm "$@"
 }
 
@@ -51,4 +54,5 @@ if [[ "$(uname -s)" == "Darwin" ]]; then
 elif [[ "$(uname -s)" == "Linux" ]]; then
   alias se=sudoedit
 fi
+export SUDOEDITOR=vim
 
