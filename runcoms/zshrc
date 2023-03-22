@@ -14,6 +14,8 @@ fi
 
 # Customize to your needs...
 
+setopt nosharehistory
+
 # jk: custom edits under this line
 # aliasses
 alias qemu-conf="../../../configure --python=/usr/bin/python2 --target-list=x86_64-softmmu --audio-drv-list=pa --enable-kvm --enable-vhost-net"
@@ -38,6 +40,11 @@ function nvm {
   nvm "$@"
 }
 
+
+# homebrew stuff
+export HOMEBREW_NO_INSTALL_CLEANUP
+export HOMEBREW_NO_AUTO_UPDATE
+
 # exports
 # fix for linux based osses wanted LC_ALL set
 export LC_ALL=$LANG
@@ -56,3 +63,7 @@ elif [[ "$(uname -s)" == "Linux" ]]; then
 fi
 export SUDOEDITOR=vim
 
+# To customize prompt, run `p10k configure` or edit ~/.zhome/.p10k.zsh.
+[[ ! -f ~/.zhome/.p10k.zsh ]] || source ~/.zhome/.p10k.zsh
+
+export DOCKER_SCAN_SUGGEST=false
