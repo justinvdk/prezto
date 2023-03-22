@@ -63,6 +63,8 @@ elif [[ "$(uname -s)" == "Linux" ]]; then
 fi
 export SUDOEDITOR=vim
 
+export PATH="$HOME/.local/bin:$PATH"
+
 # To customize prompt, run `p10k configure` or edit ~/.zhome/.p10k.zsh.
 [[ ! -f ~/.zhome/.p10k.zsh ]] || source ~/.zhome/.p10k.zsh
 
