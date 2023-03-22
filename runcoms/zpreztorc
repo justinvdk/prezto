@@ -40,8 +40,9 @@ zstyle ':prezto:load' pmodule \
   'completion' \
   'history-substring-search' \
   'git' \
-  'per-directory-history' \ # https://github.com/jimhester/per-directory-history
+  'per-directory-history' \
   'prompt'
+# https://github.com/jimhester/per-directory-history
 
 #
 # Autosuggestions
