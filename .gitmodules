@@ -29,3 +29,6 @@
 	path = modules/prompt/external/powerlevel10k
 	url = https://github.com/romkatv/powerlevel10k.git
 	shallow = true
+[submodule "modules/per-directory-history"]
+	path = modules/per-directory-history
+	url = https://github.com/jimhester/per-directory-history
