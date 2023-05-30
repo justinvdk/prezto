@@ -29,6 +29,9 @@ zstyle ':prezto:*:*' color 'yes'
 
 # Set the Prezto modules to load (browse modules).
 # The order matters.
+
+HISTDB_TABULATE_CMD=(sed -e $'s/\x1f/\t/g')
+
 zstyle ':prezto:load' pmodule \
   'environment' \
   'terminal' \
@@ -39,6 +42,7 @@ zstyle ':prezto:load' pmodule \
   'utility' \
   'completion' \
   'history-substring-search' \
+  'zsh-histdb' \
   'git' \
   'per-directory-history' \
   'prompt'
