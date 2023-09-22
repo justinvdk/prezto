@@ -44,9 +44,7 @@ zstyle ':prezto:load' pmodule \
   'history-substring-search' \
   'zsh-histdb' \
   'git' \
-  'per-directory-history' \
   'prompt'
-# https://github.com/jimhester/per-directory-history
 
 #
 # Autosuggestions
