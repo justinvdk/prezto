@@ -34,4 +34,4 @@
 	url = https://github.com/jimhester/per-directory-history
 [submodule "modules/zsh-histdb"]
 	path = modules/zsh-histdb
-	url = gh:justinvdk/zsh-histdb.git
+	url = https://github.com/justinvdk/zsh-histdb.git
