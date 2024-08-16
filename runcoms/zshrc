@@ -5,6 +5,7 @@
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
 
+
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/prezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/prezto/init.zsh"
@@ -46,6 +47,8 @@ export HOMEBREW_NO_AUTO_UPDATE
 # exports
 # fix for linux based osses wanted LC_ALL set
 export LC_ALL=$LANG
+# fix for nix-on-droid not working. From: https://github.com/romkatv/powerlevel10k/issues/469#issuecomment-582378148.
+export LANG=C.UTF-8
 
 # config
 alias nano=/usr/bin/vim
