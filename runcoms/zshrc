@@ -30,8 +30,6 @@ alias grep-white="GREP_COLOR='1;37' grep --color=always"
 
 alias pgr="ps aux | grep -v grep | grep -e"
 
-unalias gdu # collides with g(nu)du on mac
-
 # util
 function nvm {
   unset -f $funcstack[1]

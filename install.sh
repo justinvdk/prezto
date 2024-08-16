@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/usr/bin/env zsh
 
 if [ -f ~/.zshenv ] || [ -h ~/.zshenv ]; then
   printf "Found zshenv, making backup to ~/.zshenv.pre-jkprezto"
@@ -17,3 +17,6 @@ for rcfile in "${ZDOTDIR:-$HOME}"/prezto/runcoms/^README.md(.N); do
   ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
 done
 
+pushd "${ZDOTDIR}/prezto"
+git submodule update --init --recursive
+popd
