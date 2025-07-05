@@ -55,6 +55,10 @@ alias nano=/usr/bin/vim
 alias really_nano=/usr/bin/nano
 alias watch="watch --color"
 
+if [[ "$TERM" == "xterm-kitty" ]]; then
+  alias ssh="kitten ssh"
+fi
+
 # sudoedit (osx compat)
 if [[ "$(uname -s)" == "Darwin" ]]; then
   alias se="sudo -e"
@@ -65,6 +69,9 @@ fi
 export SUDOEDITOR=vim
 
 export PATH="$HOME/.local/bin:$PATH"
+if [[ -e "$HOME/bin" ]]; then
+	export PATH="$HOME/bin:$PATH"
+fi
 
 # To customize prompt, run `p10k configure` or edit ~/.zhome/.p10k.zsh.
 [[ ! -f ~/.zhome/.p10k.zsh ]] || source ~/.zhome/.p10k.zsh
